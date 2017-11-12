@@ -1,0 +1,148 @@
+html {
+  font-size: 16px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+/* header */
+.website {
+  position: relative;
+  top: 4rem;
+}
+header{
+  position: fixed;
+  background-color: white;
+  z-index: 5;
+  border: 1px solid black;
+  height: 4rem;
+  width: 100%;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lefthead{
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 2rem;
+}
+
+.righthead{
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.righthead span{
+  margin-left: 1rem;
+}
+
+/*banner*/
+
+.banner img {
+  width: 100%;
+}
+
+.banner {
+  padding: 2rem 1.5rem 2rem 1.5rem;
+  background-color: lightgrey;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.leftbanner{
+  border: 1px solid green;
+  width: 60%;
+  overflow: hidden;
+  display: flex;
+
+}
+
+.rightbanner{
+  border: 1px solid blue;
+  width: 40%;
+  margin-left: 1.5rem;
+}
+
+/* information div */
+/*left information div */
+.information{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+.leftinfo {
+  border: 1px solid red;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.leftinfo img {
+  width: 100%;
+}
+
+.leftinfo .sideinfo{
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.leftinfo .sideinfo h1 {
+  margin-bottom: 1.5rem;
+}
+
+/*right information div */
+.rightinfo {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid blue;
+}
+
+
+.sideinfo {
+  display: flex;
+  align-items: center;
+}
+
+.sideinfo .img-contain{
+  width: 35%;
+  margin: 1rem;
+}
+/*the id is to make the right side start at the same vertical part the left side does */
+#orientaion {
+  margin-top: 0;
+}
+
+.sideinfo .img-contain img {
+  width: 100%;
+}
+
+.rightinfo .sideinfo {
+  display: flex;
+  border: 1px solid black;
+  justify-content: flex-start;
+}
+
+.wordinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid red;
+}
