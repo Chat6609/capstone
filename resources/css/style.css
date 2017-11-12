@@ -76,6 +76,8 @@ header{
 
 /* information div */
 /*left information div */
+
+
 .information{
   display: flex;
   justify-content: center;
@@ -148,6 +150,11 @@ header{
   width: 65%;
 }
 /* learning div */
+#title1{
+  text-align: center;
+  background-color: lightgrey;
+  padding-top: 2rem;
+}
 .learning {
   background-color: lightgrey;
   display: flex;
@@ -161,3 +168,60 @@ header{
 }
 
 /*exhibit*/
+#title2{
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.exhibit{
+  display: flex;
+  margin: 0 0 2rem 1.5rem;
+}
+.lex{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 1.5rem;
+}
+
+.clip video{
+  width: 100%;
+}
+
+.rex{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+.rex .block:last-child{
+  background-color: lightgrey;
+}
+.rex .block{
+  display: flex;
+  align-items: center;
+}
+
+.inblock {
+  width: 65%;
+  margin-left: 1rem;
+}
+.block{
+
+}
+.rex .img-contain{
+  width: 35%;
+  margin: 1rem;
+}
+
+.rex .img-contain img{
+  width: 100%;
+}
+
+/*footer*/
+
+footer{
+  border-top: 1px solid black;
+  padding: 1rem 1.5rem 4rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
