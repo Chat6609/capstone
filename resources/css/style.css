@@ -1,8 +1,14 @@
 html {
   font-size: 16px;
 }
+body{
 
+}
 strong {
+  font-weight: bold;
+}
+h1{
+  font-size: 2em;
   font-weight: bold;
 }
 
@@ -15,7 +21,6 @@ header{
   position: fixed;
   background-color: white;
   z-index: 5;
-  border: 1px solid black;
   height: 4rem;
   width: 100%;
   padding-left: 1.5rem;
@@ -23,28 +28,132 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid black;
 }
 
 .lefthead{
-  border: 1px solid red;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 2rem;
+  font-size: 1.5rem;
 }
 
 .righthead{
-  border: 1px solid red;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-right: 1.5rem;
   padding-right: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .righthead span{
   margin-left: 1rem;
 }
+.mobilehead{
+  display: none;
+}
+.mobilelearnsomething{
+  display: none;
+}
+
+.mobileinfo{
+  display: none;
+}
+@media only screen and (max-width: 480px){
+  header{
+    display: none;
+  }
+  .mobilehead{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 4rem;
+    width: 100%;
+  }
+  .website{
+    position: static;
+    width: 100%;
+  }
+  .website .information{
+    display: none;
+    background-color: red;
+  }
+  .website .learning{
+    display: none;
+  }
+  .website .exhibit{
+    display: none;
+  }
+  #title1{
+    display: none;
+  }
+  #title2{
+    display: none;
+  }
+  .website footer {
+    display: none;
+  }
+  .website .banner {
+    display: none;
+  }
+  .website .mobilebanner{
+    display: flex;
+    height: 12.5rem;
+    width: 100%;
+  }
+  .website .mobilelearnsomething{
+    display: flex;
+    padding: 2rem 1.5rem 1rem 1.5rem;
+    background-color: lightgrey;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .website .mobilelearnsomething h5{
+    padding: .5rem 2rem;
+    background-color: grey;
+    color: white;
+    width: 85%;
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+  .website .mobilelearnsomething h4{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-top: 2rem;
+  }
+  .website .mobileinfo{
+    display: flex;
+    flex-direction: column;
+  }
+  .website .mobileinfo .sideinfo{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 1rem 2rem 1rem;
+  }
+  .website .mobileinfo .sideinfo .img-contain{
+    width: 100%;
+    height: 15rem;
+    overflow: hidden;
+    border: 1px solid green;
+  }
+
+  .website .mobileinfo .sideinfo .img-contain img{
+    height: auto;
+  }
+  .website .mobileinfo .sideinfo .wordinfo{
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+
+
+
 
 /*banner*/
 
@@ -61,7 +170,6 @@ header{
 }
 
 .leftbanner{
-  border: 1px solid green;
   width: 60%;
   overflow: hidden;
   display: flex;
@@ -69,10 +177,41 @@ header{
 }
 
 .rightbanner{
-  border: 1px solid blue;
-  width: 40%;
+
+  width: 33%;
   margin-left: 1.5rem;
 }
+/*font, color, spacing for banner*/
+.banner{
+
+}
+.banner h1{
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.banner h4{
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  line-height: 2rem;
+}
+
+.banner h5/*button*/{
+  font-size: 1.5rem;
+  text-align: center;
+  padding: .5rem 2rem;
+  background-color: grey;
+  color: white;
+  margin-top: 3rem;
+}
+
+/*banner for mobile*/
+.mobilebanner{
+  display: none;
+}
+
+
 
 /* information div */
 /*left information div */
@@ -80,14 +219,13 @@ header{
 
 .information{
   display: flex;
-  justify-content: center;
   align-items: flex-start;
   padding-bottom: 2rem;
-  padding-top: 2rem;
+  padding-top: 1rem;
 }
 
 .leftinfo {
-  border: 1px solid red;
+
   width: 60%;
   display: flex;
   flex-direction: column;
@@ -97,6 +235,7 @@ header{
 
 .leftinfo img {
   width: 100%;
+  padding-top: 1rem;
 }
 
 .leftinfo .sideinfo{
@@ -105,16 +244,28 @@ header{
   flex-direction: column;
 }
 
-.leftinfo .sideinfo h1 {
+.leftinfo .sideinfo h2 {
   margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+/*font, color, spacing for left info*/
+
+.leftinfo .sideinfo p{
+  line-height: 1.5rem;
+  font-size: 1.1rem;
 }
 
+.leftinfo .sideinfo h2{
+  text-align: left;
+  width: 100%;
+  font-size: 2.5rem;
+}
 /*right information div */
 .rightinfo {
   width: 40%;
   display: flex;
   flex-direction: column;
-  border: 1px solid blue;
+  border-left: 1px solid blue;
 }
 
 
@@ -129,7 +280,7 @@ header{
 }
 /*the id is to make the right side start at the same vertical part the left side does */
 #orientaion {
-  margin-top: 0;
+
 }
 
 .sideinfo .img-contain img {
@@ -138,40 +289,108 @@ header{
 
 .rightinfo .sideinfo {
   display: flex;
-  border: 1px solid black;
   justify-content: flex-start;
 }
 
 .wordinfo {
+  width: 65%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  border: 1px solid red;
-  width: 65%;
+  margin-left: 0.5rem;
+}
+
+/*font, color, spacing for right info*/
+
+.wordinfo p{
+  margin: .5rem 0;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+}
+
+.wordinfo h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.wordinfo a {
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.wordinfo a:hover{
+  text-decoration: underline;
+  transition-delay: 500ms;
 }
 /* learning div */
 #title1{
   text-align: center;
   background-color: lightgrey;
   padding-top: 2rem;
+  font-size: 2.25rem;
 }
 .learning {
   background-color: lightgrey;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  padding: 2rem 4.5rem;
+  width: 100%;
 }
-.learnblock {
-  background-color: white;
+.learnrow{
+  display: flex;
+  margin: 2rem 4.5rem 2rem 4.5rem;
+}
+.learning .learnrow:last-child{
+  margin-top: 0;
 }
 
+.learnblock img{
+  height: auto;
+  width: 100%;
+}
+.learnrow .learnblock:last-child{
+  margin-right: 0;
+}
+
+.learnblock {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  margin-right: 2rem;
+}
+
+.wordblock{
+  width: 100%;
+  text-align: left;
+}
+/*start learning */
+
+.wordblock h5 {
+  margin: .5rem 0;
+  padding-left: 1rem;
+}
+
+.wordblock h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-top: 1rem;
+  padding-left: 1rem;
+}
+
+.wordblock p {
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  padding-left: 1rem;
+  padding-bottom: 1.5rem;
+  padding-right: 1rem;
+}
 /*exhibit*/
 #title2{
   text-align: center;
   padding-top: 2rem;
   padding-bottom: 2rem;
+  font-size: 2.25rem;
 }
 .exhibit{
   display: flex;
@@ -184,6 +403,20 @@ header{
   margin-right: 1.5rem;
 }
 
+.text {
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+.text h4{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.text p{
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  margin-top: .5rem;
+}
 .clip video{
   width: 100%;
 }
@@ -205,8 +438,21 @@ header{
   width: 65%;
   margin-left: 1rem;
 }
-.block{
 
+.inblock h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.inblock p {
+  font-size: 1.1rem;
+  line-height: 1.25rem;
+}
+
+.block{
+ margin-right: 1rem;
+ padding-right: .5rem;
 }
 .rex .img-contain{
   width: 35%;
@@ -224,4 +470,5 @@ footer{
   padding: 1rem 1.5rem 4rem 1.5rem;
   display: flex;
   justify-content: space-between;
+  font-size: .9rem;
 }
