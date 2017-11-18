@@ -1,9 +1,10 @@
 html {
   font-size: 16px;
+  font-family: 'lora',serif;
+  color: #2c1f06;
+  background-color: #c78a1c;
 }
-body{
 
-}
 strong {
   font-weight: bold;
 }
@@ -16,10 +17,10 @@ h1{
 .website {
   position: relative;
   top: 4rem;
+
 }
 header{
   position: fixed;
-  background-color: white;
   z-index: 5;
   height: 4rem;
   width: 100%;
@@ -28,7 +29,8 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid black;
+  background-color: #c78a1c;
+  border-bottom: .1px solid #b17a19;
 }
 
 .lefthead{
@@ -51,6 +53,9 @@ header{
 .righthead span{
   margin-left: 1rem;
 }
+.righthead span:hover{
+  text-decoration: underline;
+}
 .mobilehead{
   display: none;
 }
@@ -68,158 +73,27 @@ header{
 .exhibitmobile{
   display: none;
 }
-@media only screen and (max-width: 600px){
-  header{
-    display: none;
-  }
-  .mobilehead{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 4rem;
-    width: 100%;
-  }
-  .website{
-    position: static;
-    width: 100%;
-  }
-  .website .information{
-    display: none;
-    background-color: red;
-  }
-  .website .learning{
-    display: none;
-  }
-  .website .exhibit{
-    display: none;
-  }
-  .website .banner {
-    display: none;
-  }
-  .website .mobilebanner{
-    display: flex;
-    height: 12.5rem;
-    width: 100%;
-    overflow: hidden;
-  }
-  .website .mobilebanner img{
-    max-height: inherit;
-  }
-  .website .mobilelearnsomething{
-    display: flex;
-    padding: 2rem 1.5rem 1rem 1.5rem;
-    background-color: lightgrey;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .website .mobilelearnsomething h5{
-    padding: .5rem 2rem;
-    background-color: grey;
-    color: white;
-    width: 85%;
-    text-align: center;
-    margin-top: 1.5rem;
-  }
-  .website .mobilelearnsomething h4{
-    font-size: 1.5rem;
-    line-height: 2rem;
-    margin-top: 2rem;
-  }
-  .website .mobileinfo{
-    display: flex;
-    flex-direction: column;
-  }
-  .website .mobileinfo .sideinfo{
-    display: flex;
-    flex-direction: column;
-    margin: 1rem 1rem 2rem 1rem;
-  }
-  .website .mobileinfo .sideinfo .img-contain{
-    width: 100%;
-    max-height: 15rem;
-    overflow: hidden;
-
-  }
-
-  .website .mobileinfo .sideinfo .img-contain img{
-    max-width: auto;
-    max-height: inherit;
-  }
-  .website .mobileinfo .sideinfo .wordinfo{
-    width: 100%;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  .website #title1{
-    background-color: white;
-  }
-  .website .learningmobile{
-    display: flex;
-    flex-direction: column;
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  .website .learningmobile p:first-child{
-    margin-top: 1rem;
-  }
-  .website .learningmobile p:last-child{
-    margin-bottom: 2rem;
-  }
-  .website .learningmobile p{
-    background-color: lightgrey;
-    padding: 1rem 0 1.5rem 1rem;
-    margin-top: .5rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-
-
-
-  #title2{
-    padding-bottom: 1rem;
-  }
-  .website .exhibitmobile{
-    display: flex;
-    margin-bottom: 1.5rem;
-  }
-  .website .exhibitmobile .clipmobile{
-    max-width: 480px;
-  }
-  .website .exhibitmobile .clipmobile video{
-    width: 100%;
-  }
-  .website footer {
-    padding-bottom: 1rem;
-    border-style: none;
-  }
-  .website footer p:last-child{
-    display: none;
-  }
-
-
-
-}
-
-
-
 
 
 /*banner*/
 
 .banner img {
   width: 100%;
+  border: 1px solid #c78a1c
 }
 
 .banner {
   padding: 2rem 1.5rem 2rem 1.5rem;
-  background-color: lightgrey;
+  background-color: #c78a1c;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  transition: background-color 1s ease-in-out .3s;
 }
-
+.banner:hover{
+  background-color: #dd9a1f;
+  transition: background-color 1s ease-in-out .5s;
+}
 .leftbanner{
   width: 60%;
   overflow: hidden;
@@ -232,7 +106,6 @@ header{
   width: 33%;
   margin-left: 1.5rem;
 }
-/*font, color, spacing for banner*/
 .banner{
 
 }
@@ -246,16 +119,24 @@ header{
   margin-bottom: 2rem;
   margin-top: 2rem;
   line-height: 2rem;
+  color: #3d2b09;
 }
 
 .banner h5/*button*/{
   font-size: 1.5rem;
   text-align: center;
   padding: .5rem 2rem;
-  background-color: grey;
-  color: white;
+  background-color: #c78a1c;
   margin-top: 3rem;
+  border-radius: 5px;
+  transition: background-color 1s ease-out .3s;
 }
+
+.banner h5:hover{
+  background-color: #e2a434;
+  transition: background-color 400ms ease-out 400ms;
+}
+
 
 /*banner for mobile*/
 .mobilebanner{
@@ -273,6 +154,7 @@ header{
   align-items: flex-start;
   padding-bottom: 2rem;
   padding-top: 1rem;
+  background-color: #c78a1c;
 }
 
 .leftinfo {
@@ -282,8 +164,12 @@ header{
   flex-direction: column;
   padding-right: 1.5rem;
   padding-left: 1.5rem;
+  transition: background-color .3s ease-out .1s;
 }
-
+.leftinfo:hover{
+  background-color: #dd9a1f;
+  transition: background-color .5s ease-in-out .5s;
+}
 .leftinfo img {
   width: 100%;
   padding-top: 1rem;
@@ -298,12 +184,14 @@ header{
 .leftinfo .sideinfo h2 {
   margin-bottom: 1.5rem;
   font-weight: 700;
+  color: #3d2b09;
 }
 /*font, color, spacing for left info*/
 
 .leftinfo .sideinfo p{
   line-height: 1.5rem;
   font-size: 1.1rem;
+  color: #3d2b09;
 }
 
 .leftinfo .sideinfo h2{
@@ -316,7 +204,7 @@ header{
   width: 40%;
   display: flex;
   flex-direction: column;
-  border-left: 1px solid blue;
+  border-left: 1px solid #64450e;
 }
 
 
@@ -324,7 +212,12 @@ header{
   display: flex;
   align-items: center;
 }
-
+.rightinfo .sideinfo:hover{
+  background-color: #dd9a1f;
+  transition: background-color 1s ease-in-out 0s;
+  border: 1px solid #a98307;
+  transition: border .5 linear 400ms;
+}
 .sideinfo .img-contain{
   width: 35%;
   margin: 1rem;
@@ -341,6 +234,7 @@ header{
 .rightinfo .sideinfo {
   display: flex;
   justify-content: flex-start;
+  transition: background-color .3s ease-out .1s;
 }
 
 .wordinfo {
@@ -361,6 +255,7 @@ header{
 .wordinfo h4 {
   font-size: 1.5rem;
   font-weight: bold;
+  color: #3d2b09;
 }
 
 .wordinfo a {
@@ -378,6 +273,7 @@ header{
   background-color: lightgrey;
   padding-top: 2rem;
   font-size: 2.25rem;
+  background-color: #c78a1c;
 }
 .learning {
   background-color: lightgrey;
@@ -385,6 +281,7 @@ header{
   flex-direction: column;
   justify-content: center;
   width: 100%;
+  background-color: #c78a1c;
 }
 .learnrow{
   display: flex;
@@ -403,14 +300,17 @@ header{
 }
 
 .learnblock {
-  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   width: 100%;
   margin-right: 2rem;
+  transition: background-color .5s ease-out .3s;
 }
-
+.learnblock:hover{
+  background-color: #dd9a1f;
+  transition: background-color .5s ease-in-out .3s;
+}
 .wordblock{
   width: 100%;
   text-align: left;
@@ -427,6 +327,7 @@ header{
   font-weight: bold;
   padding-top: 1rem;
   padding-left: 1rem;
+  color: #3d2b09;
 }
 
 .wordblock p {
@@ -442,18 +343,26 @@ header{
   padding-top: 2rem;
   padding-bottom: 2rem;
   font-size: 2.25rem;
+  background-color: #c78a1c;
 }
 .exhibit{
   display: flex;
-  margin: 0 0 2rem 1.5rem;
+  padding-left: 0rem;
+  background-color: #c78a1c;
+  padding-right: 1.5rem;
 }
 .lex{
   width: 60%;
   display: flex;
   flex-direction: column;
   margin-right: 1.5rem;
+  transition: background-color .5s ease-out .3s;
+  padding-left: 1.5rem;
 }
-
+.lex:hover{
+  background-color: #dd9a1f;
+  transition: background-color .5s ease-in-out .5s;
+}
 .text {
   margin-top: 1.5rem;
   margin-bottom: 2rem;
@@ -461,6 +370,7 @@ header{
 .text h4{
   font-size: 1.5rem;
   font-weight: bold;
+  color: #3d2b09;
 }
 
 .text p{
@@ -477,14 +387,16 @@ header{
   display: flex;
   flex-direction: column;
 }
-.rex .block:last-child{
-  background-color: lightgrey;
-}
+
 .rex .block{
   display: flex;
   align-items: center;
+  transition: background-color .5s ease-out .3s;
 }
-
+.rex .block:hover{
+  background-color: #dd9a1f;
+  transition: background-color .5s ease-in-out .5s;
+}
 .inblock {
   width: 65%;
   margin-left: 1rem;
@@ -522,4 +434,134 @@ footer{
   display: flex;
   justify-content: space-between;
   font-size: .9rem;
+  background-color: #c78a1c;
+}
+
+@media only screen and (max-width: 600px){
+  header{
+    display: none;
+  }
+  .mobilehead{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 4rem;
+    width: 100%;
+  }
+  .website{
+    position: static;
+    width: 100%;
+  }
+  .website .information{
+    display: none;
+  }
+  .website .learning{
+    display: none;
+  }
+  .website .exhibit{
+    display: none;
+  }
+  .website .banner {
+    display: none;
+  }
+  .website .mobilebanner{
+    display: flex;
+    height: 12.5rem;
+    width: 100%;
+    overflow: hidden;
+  }
+  .website .mobilebanner img{
+    max-height: inherit;
+  }
+  .website .mobilelearnsomething{
+    display: flex;
+    padding: 2rem 1.5rem 1rem 1.5rem;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .website .mobilelearnsomething h5{
+    padding: .5rem 2rem;
+    width: 85%;
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #3d2b09;
+  }
+  .website .mobilelearnsomething h4{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-top: 2rem;
+  }
+  .website .mobileinfo{
+    display: flex;
+    flex-direction: column;
+  }
+  .website .mobileinfo .sideinfo{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 1rem 2rem 1rem;
+  }
+  .website .mobileinfo .sideinfo .img-contain{
+    width: 100%;
+    max-height: 15rem;
+    overflow: hidden;
+
+  }
+
+  .website .mobileinfo .sideinfo .img-contain img{
+    max-height: inherit;
+  }
+  .website .mobileinfo .sideinfo .wordinfo{
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .website #title1{
+  }
+  .website .learningmobile{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .website .learningmobile p:first-child{
+    margin-top: 1rem;
+  }
+  .website .learningmobile p:last-child{
+    margin-bottom: 2rem;
+  }
+  .website .learningmobile p{
+    padding: 1rem 0 1.5rem 1rem;
+    margin-top: .5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    background-color: #dd9a1f;
+  }
+
+
+
+  #title2{
+    padding-bottom: 1rem;
+  }
+  .website .exhibitmobile{
+    display: flex;
+    margin-bottom: 1.5rem;
+  }
+  .website .exhibitmobile .clipmobile{
+    max-width: 480px;
+  }
+  .website .exhibitmobile .clipmobile video{
+    width: 100%;
+  }
+  .website footer {
+    padding-bottom: 1rem;
+    border-style: none;
+  }
+  .website footer p:last-child{
+    display: none;
+  }
+
+
+
 }
