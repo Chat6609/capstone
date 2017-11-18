@@ -92,7 +92,7 @@ header{
 }
 .banner:hover{
   background-color: #dd9a1f;
-  transition: background-color 1s ease-in-out .5s;
+  transition: background-color 1s ease-in-out 0s;
 }
 .leftbanner{
   width: 60%;
@@ -134,7 +134,7 @@ header{
 
 .banner h5:hover{
   background-color: #e2a434;
-  transition: background-color 400ms ease-out 400ms;
+  transition: background-color 400ms ease-out 0s;
 }
 
 
@@ -156,7 +156,9 @@ header{
   padding-top: 1rem;
   background-color: #c78a1c;
 }
-
+.information img{
+  border: 1px solid #c78a1c;
+}
 .leftinfo {
 
   width: 60%;
@@ -168,7 +170,7 @@ header{
 }
 .leftinfo:hover{
   background-color: #dd9a1f;
-  transition: background-color .5s ease-in-out .5s;
+  transition: background-color .5s ease-in-out 0s;
 }
 .leftinfo img {
   width: 100%;
@@ -283,6 +285,9 @@ header{
   width: 100%;
   background-color: #c78a1c;
 }
+.learning img{
+  border: 1px solid #c78a1c;
+}
 .learnrow{
   display: flex;
   margin: 2rem 4.5rem 2rem 4.5rem;
@@ -309,12 +314,15 @@ header{
 }
 .learnblock:hover{
   background-color: #dd9a1f;
-  transition: background-color .5s ease-in-out .3s;
+  transition: background-color .5s ease-in-out 0s;
 }
 .wordblock{
   width: 100%;
   text-align: left;
 }
+
+
+
 /*start learning */
 
 .wordblock h5 {
@@ -351,6 +359,9 @@ header{
   background-color: #c78a1c;
   padding-right: 1.5rem;
 }
+.exhibit img{
+  border: 1px solid #c78a1c;
+}
 .lex{
   width: 60%;
   display: flex;
@@ -361,7 +372,7 @@ header{
 }
 .lex:hover{
   background-color: #dd9a1f;
-  transition: background-color .5s ease-in-out .5s;
+  transition: background-color .5s ease-in-out 0s;
 }
 .text {
   margin-top: 1.5rem;
@@ -395,7 +406,7 @@ header{
 }
 .rex .block:hover{
   background-color: #dd9a1f;
-  transition: background-color .5s ease-in-out .5s;
+  transition: background-color .5s ease-in-out 0s;
 }
 .inblock {
   width: 65%;
